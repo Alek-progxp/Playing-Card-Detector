@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 7
+names: ['Club', 'Diamond', 'Heart', 'Jack', 'King', 'Queen', 'Spade']
+
+roboflow:
+  workspace: haw-aocnc
+  project: playing-cards-lvix5
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/haw-aocnc/playing-cards-lvix5/dataset/2
