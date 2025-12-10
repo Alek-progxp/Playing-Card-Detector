@@ -28,7 +28,7 @@ def train_model(data_yaml_path, model_name='yolov8n.pt', epochs=100, imgsz=640, 
         patience=50,  # Early stopping patience
         save=True,
         device=0,  # Use GPU 0, change to 'cpu' if no GPU available
-        workers=8,
+        workers=6,  # Safe number for Windows while OneDrive is paused
         project='runs/detect',
         name='yolo_custom_train',
         exist_ok=True
@@ -107,16 +107,18 @@ if __name__ == "__main__":
     # ========== CONFIGURATION ==========
     # Path to your Roboflow dataset's data.yaml file
     # After downloading from Roboflow, this will be in your dataset folder
-    DATA_YAML = r"Playing Cards.v2i.yolov8\data.yaml"
+    DATA_YAML = r"Playing Cards.v4-fastmodel-resized640-aug3x.yolov8\data.yaml"
     
     # Choose model size: yolov8n.pt (nano), yolov8s.pt (small), yolov8m.pt (medium)
     # yolov8l.pt (large), yolov8x.pt (xlarge)
     MODEL_NAME = "yolov8n.pt"
     
     # Training parameters
-    EPOCHS = 100
+    # With 10k images, 50-75 epochs is usually sufficient
+    # Early stopping (patience=50) will stop if no improvement
+    EPOCHS = 50  # Reduced from 100 - large dataset converges faster
     IMAGE_SIZE = 640
-    BATCH_SIZE = 16
+    BATCH_SIZE = 24  # Optimized for RTX 4060 8GB - safe and fast
     
     # ========== TRAINING ==========
     print("Starting YOLO training...")
