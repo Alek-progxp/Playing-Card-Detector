@@ -108,4 +108,5 @@ Playing-Card-Detector/
 
 ## License
 
-This project uses the [Playing Cards Dataset](https://universe.roboflow.com/augmented-startups/playing-cards-ow27d) from Roboflow (Public Domain).
+ - This project uses the [Playing Cards Dataset](https://universe.roboflow.com/augmented-startups/playing-cards-ow27d) from Roboflow (Public Domain).
+ - This project uses a [pretrained YOLOv8 model](https://docs.ultralytics.com/models/yolov8/) from Ultralytics (Free to use under AGPL-3.0 License).
