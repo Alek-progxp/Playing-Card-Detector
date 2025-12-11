@@ -79,16 +79,6 @@ Cards are labeled as: `<Rank><Suit>`
 
 Trained on 21,203 images with 52 classes using YOLOv8n.
 
-## Training Your Own Model
-
-See [USAGE.md](USAGE.md) for detailed training instructions.
-
-**Quick training:**
-```bash
-# Edit train_yolo.py to set your dataset path
-py train_yolo.py
-```
-
 ## Project Structure
 
 ```
@@ -101,9 +91,6 @@ Playing-Card-Detector/
 │   └── yolo_custom_train/
 │       └── weights/
 │           └── best.pt      # Trained model
-├── examples/result/         # Detection outputs
-│   ├── images/              # Annotated images
-│   └── video/               # Annotated videos
 ├── DETECTION_GUIDE.md       # Detailed usage guide
 └── USAGE.md                 # Full training documentation
 ```
