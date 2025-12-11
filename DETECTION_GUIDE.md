@@ -25,7 +25,7 @@ py detect_image.py test_cards.jpg
 ```
 
 **Output:**
-- Annotated image saved to: `results/test_cards_annotated.jpg`
+- Annotated image saved to: `examples/result/images/test_cards_annotated.jpg`
 - Console displays detected cards with confidence scores
 
 **Sample Output:**
@@ -52,7 +52,7 @@ Detection 3:
   Bounding Box: [540.1, 55.2, 700.3, 360.5]
 
 ============================================================
-Annotated image saved to: results/test_cards_annotated.jpg
+Annotated image saved to: examples/result/images/test_cards_annotated.jpg
 ============================================================
 ```
 
@@ -75,7 +75,7 @@ py detect_image.py image.jpg 0.15
 
 ### Custom Output Directory
 
-Save results to a specific folder:
+Save results to a specific folder (default is `examples/result/images/`):
 
 ```powershell
 py detect_image.py image.jpg 0.25 my_results/
@@ -97,7 +97,7 @@ py detect_image.py test_images/ batch
 
 **Output:**
 - Processes all .jpg, .png, .bmp files in the folder
-- Saves all annotated images to `results/` folder
+- Saves all annotated images to `examples/result/images/` folder
 - Shows summary statistics
 
 ---
@@ -118,7 +118,7 @@ py detect_video.py card_game.mp4
 ```
 
 **Output:**
-- Annotated video saved to: `runs/detect/predict/card_game.mp4`
+- Annotated video saved to: `examples/result/video/card_game.mp4`
 - Console shows frame-by-frame detection counts
 - Summary statistics at the end
 
@@ -141,7 +141,7 @@ Processing complete!
 Total frames: 120
 Total detections: 600
 Average detections per frame: 5.00
-Output video saved to: runs/detect/predict/
+Output video saved to: examples/result/video/
 ```
 
 ### Custom Confidence for Video
